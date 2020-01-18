@@ -48,9 +48,9 @@ class Window(Frame):
         fps = reader.get_meta_data()['fps'] 
 
         ret, image = cap.read()
-        cv2.imwrite('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg', image)
+        cv2.imwrite('~/Git/preview.jpg', image)
 
-        self.show_image('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg')
+        self.show_image('~/Git/preview.jpg')
 
 
     def show_image(self, frame):
@@ -98,10 +98,10 @@ class Window(Frame):
             #show created virtual line
             print(self.line)
             print(self.rect)
-            img = cv2.imread('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg')
+            img = cv2.imread('~/Git/preview.jpg')
             cv2.line(img, self.line[0], self.line[1], (0, 255, 0), 3)
-            cv2.imwrite('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/copy.jpg', img)
-            self.show_image('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/copy.jpg')
+            cv2.imwrite('~/Git/copy.jpg', img)
+            self.show_image('~/Git/copy.jpg')
 
             ## for demonstration
             # (rxmin, rymin) = self.rect[0]
