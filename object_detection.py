@@ -374,7 +374,7 @@ def draw_boxes(image, boxes, line, labels, obj_thresh, dcnt):
                 cimg = image[box.ymin:box.ymax, box.xmin:box.xmax]
                 cv2.imshow("violation", cimg)
                 cv2.waitKey(5)
-                cv2.imwrite("G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Detected Images/violation_"+str(dcnt)+".jpg", cimg)
+                cv2.imwrite("~/Git/violation_"+str(dcnt)+".jpg", cimg)
                 dcnt = dcnt+1
             else:
                 cv2.rectangle(image, (box.xmin,box.ymin), (box.xmax,box.ymax), (0,255,0), 3)
